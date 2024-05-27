@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medir Nivel de Violencia en Relaciones de Pareja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Que tan toxica es tu relacion?</h1>
+        <form id="violenceForm">
+            <div class="question" data-question="1">
+                <label>1. ¿Te han insultado, ridiculizado o humillado en público o en privado?</label>
+                <div>
+                    <input type="radio" name="q1" value="0"> Nunca<br>
+                    <input type="radio" name="q1" value="1"> A veces<br>
+                    <input type="radio" name="q1" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="2">
+                <label>2. ¿Te han controlado la manera de vestir, hablar o comportarte?</label>
+                <div>
+                    <input type="radio" name="q2" value="0"> Nunca<br>
+                    <input type="radio" name="q2" value="1"> A veces<br>
+                    <input type="radio" name="q2" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="3">
+                <label>3. ¿Te han hecho sentir miedo o intimidado con miradas, gestos o actitudes?</label>
+                <div>
+                    <input type="radio" name="q3" value="0"> Nunca<br>
+                    <input type="radio" name="q3" value="1"> A veces<br>
+                    <input type="radio" name="q3" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="4">
+                <label>4. ¿Te han impedido ver a tus amigos o familiares?</label>
+                <div>
+                    <input type="radio" name="q4" value="0"> Nunca<br>
+                    <input type="radio" name="q4" value="1"> A veces<br>
+                    <input type="radio" name="q4" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="5">
+                <label>5. ¿Te han amenazado con hacerte daño a ti, a tus seres queridos o a tus mascotas?</label>
+                <div>
+                    <input type="radio" name="q5" value="0"> Nunca<br>
+                    <input type="radio" name="q5" value="1"> A veces<br>
+                    <input type="radio" name="q5" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="6">
+                <label>6. ¿Te han destruido objetos personales o bienes materiales tuyos?</label>
+                <div>
+                    <input type="radio" name="q6" value="0"> Nunca<br>
+                    <input type="radio" name="q6" value="1"> A veces<br>
+                    <input type="radio" name="q6" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="7">
+                <label>7. ¿Te han empujado, golpeado o agredido físicamente de alguna manera?</label>
+                <div>
+                    <input type="radio" name="q7" value="0"> Nunca<br>
+                    <input type="radio" name="q7" value="1"> A veces<br>
+                    <input type="radio" name="q7" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="8">
+                <label>8. ¿Te han obligado a tener relaciones sexuales o realizar actos sexuales sin tu consentimiento?</label>
+                <div>
+                    <input type="radio" name="q8" value="0"> Nunca<br>
+                    <input type="radio" name="q8" value="1"> A veces<br>
+                    <input type="radio" name="q8" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="9">
+                <label>9. ¿Te han controlado el dinero o te han prohibido trabajar o estudiar?</label>
+                <div>
+                    <input type="radio" name="q9" value="0"> Nunca<br>
+                    <input type="radio" name="q9" value="1"> A veces<br>
+                    <input type="radio" name="q9" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div class="question" data-question="10">
+                <label>10. ¿Te han hecho sentir culpable o responsable de su comportamiento violento?</label>
+                <div>
+                    <input type="radio" name="q10" value="0"> Nunca<br>
+                    <input type="radio" name="q10" value="1"> A veces<br>
+                    <input type="radio" name="q10" value="2"> Frecuentemente<br>
+                </div>
+            </div>
+            <div id="resultContainer" style="display: none;">
+                <button type="button" onclick="calculateResult()">Calcular Resultado</button>
+                <div id="result" class="result"></div>
+                <div id="gaugeContainer"></div>
+            </div>
+            <button type="button" onclick="nextQuestion()">Siguiente</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-gauges"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
